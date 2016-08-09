@@ -1,6 +1,14 @@
 <h2>Students</h2>
 <ul>
 	<li>Here are your students...</li>
+
+	
+<div ng-app="ngInterview.api.students">
+<div ng-controller="StudentsController" data-ng-init="StudentDetails()">
+<label>Search: <input ng-model="search"></label>
+<span ng-repeat="student in Students| filter:search"><li ng-click="retrieveData(student)">{{student.FirstName}}</li></span>{{StudentDetails}}
+</div>
+</div>
 	
 </ul>
 
